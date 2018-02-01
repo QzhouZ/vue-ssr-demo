@@ -1,3 +1,6 @@
 <template>
-<div>2222</div>
 </template>
+<style lang="less" scoped>
+    
+</style>
+

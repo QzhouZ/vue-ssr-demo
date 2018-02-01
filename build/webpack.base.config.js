@@ -16,8 +16,14 @@ module.exports = {
     filename: '[name].[chunkhash].js'
   },
   resolve: {
+    extensions: ['.js', '.vue', '.less'],
     alias: {
-      'public': path.resolve(__dirname, '../public')
+      '@': path.resolve(__dirname, '../src'),
+      'public': path.resolve(__dirname, '../public'),
+      'components': path.resolve(__dirname, '../src/components'),
+      'assets': path.resolve(__dirname, '../src/assets'),
+      'views': path.resolve(__dirname, '../src/views'),
+      'util': path.resolve(__dirname, '../src/util')
     }
   },
   module: {
@@ -42,12 +48,12 @@ module.exports = {
         }
       },
       {
-        test: /\.css$/,
+        test: /\.(less|css)$/,
         use: isProd
           ? ExtractTextPlugin.extract({
-              use: 'css-loader?minimize',
-              fallback: 'vue-style-loader'
-            })
+            use: 'css-loader?minimize',
+            fallback: 'vue-style-loader'
+          })
           : ['vue-style-loader', 'css-loader']
       }
     ]
@@ -58,15 +64,15 @@ module.exports = {
   },
   plugins: isProd
     ? [
-        new webpack.optimize.UglifyJsPlugin({
-          compress: { warnings: false }
-        }),
-        new webpack.optimize.ModuleConcatenationPlugin(),
-        new ExtractTextPlugin({
-          filename: 'common.[chunkhash].css'
-        })
-      ]
+      new webpack.optimize.UglifyJsPlugin({
+        compress: { warnings: false }
+      }),
+      new webpack.optimize.ModuleConcatenationPlugin(),
+      new ExtractTextPlugin({
+        filename: 'common.[chunkhash].css'
+      })
+    ]
     : [
-        new FriendlyErrorsPlugin()
-      ]
+      new FriendlyErrorsPlugin()
+    ]
 }
