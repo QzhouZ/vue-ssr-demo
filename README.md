@@ -1,5 +1,3 @@
-# vue-ssr node服务端渲染工作流
-
 ## 解决问题
 - 【手机端首屏渲染问题】
 - 【SEO解决搜索引擎抓取问题】
@@ -10,7 +8,6 @@
 - 项目整体目录结构
 
 ````bash
-├── LICENSE
 ├── README.md
 ├── build
 │   ├── setup-dev-server.js
@@ -88,9 +85,7 @@
 
 ## 运行 Demo 示例项目
 
-### 安装 NPM 包
-
-- 进入项目 目录执行以下命令
+进入项目 目录执行以下命令
 
 ```bash
 npm install
