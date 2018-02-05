@@ -96,9 +96,10 @@
 npm install
 ```
 
-### 运行 Demo 示例
-
-- 在项目目录下执行
+```bash
+// dev模式下启动服务
+npm run dev
+```
 
 ```bash
 // 打包命令
@@ -108,9 +109,5 @@ npm run build
 // production模式下启动服务
 npm run start
 ```
-```bash
-// dev模式下启动服务
-npm run dev
-```
 
-npm run dev 启动服务路径http://localhost:6180
+npm run dev 启动服务路径http://localhost:8080
