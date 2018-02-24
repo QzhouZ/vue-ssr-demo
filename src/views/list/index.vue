@@ -18,7 +18,6 @@ export default {
   },
   computed: {
     deptData() {
-      console.log(this.$store.getters.deptData);
       return this.$store.getters.deptData;
     }
   },
