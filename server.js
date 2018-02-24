@@ -14,6 +14,7 @@ const serverInfo =
   `express/${require('express/package.json').version} ` +
   `vue-server-renderer/${require('vue-server-renderer/package.json').version}`
 
+const tdkConfig = require('./config/tdk')
 const app = express()
 
 function createRenderer (bundle, options) {
@@ -94,7 +95,7 @@ function render (req, res) {
   }
 
   const context = {
-    title: 'Vue ssr demo', // default title
+    tdk: tdkConfig,
     url: req.url
   }
   renderer.renderToString(context, (err, html) => {

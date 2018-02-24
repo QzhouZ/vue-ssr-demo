@@ -3,6 +3,16 @@
       <li><router-link to="/list">科室列表</router-link></li>
     </ul>
 </template>
+<script>
+export default {
+  tdk() {
+      return {
+          title: '首页'
+      }
+  }
+}
+</script>
+
 <style lang="less" scoped>
     .menu {
         margin: 30px;

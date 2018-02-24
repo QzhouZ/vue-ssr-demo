@@ -1,7 +1,7 @@
 export default {
-    pages: {
-        list: {
-            deptData: []
-        }
+  pages: {
+    list: {
+      deptData: []
     }
+  }
 }

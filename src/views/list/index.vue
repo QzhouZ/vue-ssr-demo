@@ -13,27 +13,32 @@
 </template>
 <script>
 export default {
+  asyncData({ store, route }) {
+    return store.dispatch("fetchItem", 1);
+  },
   computed: {
     deptData() {
       console.log(this.$store.getters.deptData);
       return this.$store.getters.deptData;
     }
   },
-  asyncData({ store, route }) {
-    return store.dispatch("fetchItem", 1);
+  tdk() {
+    return {
+      title: "科室列表"
+    };
   }
 };
 </script>
 <style lang="less" scoped>
 .gp-dept {
-    margin: 20px;
+  margin: 20px;
 }
 .dept-list {
   overflow: hidden;
   background: #fff;
   width: 360px;
   border-left: 1px solid #ebecf1;
-    border-top: 1px solid #ebecf1;
+  border-top: 1px solid #ebecf1;
   li {
     float: left;
     box-sizing: border-box;

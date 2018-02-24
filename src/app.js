@@ -5,6 +5,9 @@ import App from './App.vue'
 import { createRouter } from './router'
 import { createStore } from './store'
 import { sync } from 'vuex-router-sync'
+import seoTDKMixin from './util/seo-tdk'
+
+Vue.mixin(seoTDKMixin)
 
 export function createApp () {
   const router = createRouter()

@@ -1,5 +1,5 @@
 export default {
-    deptData: state => {
-        return state.pages.list.deptData
-    }
+  deptData: state => {
+    return state.pages.list.deptData
+  }
 }
