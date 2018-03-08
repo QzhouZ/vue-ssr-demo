@@ -5,17 +5,17 @@
 </template>
 <script>
 export default {
-  tdk() {
-      return {
-          title: '首页'
-      }
+  tdk () {
+    return {
+      title: '首页'
+    }
   }
 }
 </script>
 
 <style lang="less" scoped>
-    .menu {
-        margin: 30px;
-    }
+.menu {
+  margin: 30px;
+}
 </style>
 

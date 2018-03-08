@@ -13,20 +13,20 @@
 </template>
 <script>
 export default {
-  asyncData({ store, route }) {
-    return store.dispatch("fetchItem", 1);
+  asyncData ({ store, route }) {
+    return store.dispatch('fetchItem', 1)
   },
   computed: {
-    deptData() {
-      return this.$store.getters.deptData;
+    deptData () {
+      return this.$store.getters.deptData
     }
   },
-  tdk() {
+  tdk () {
     return {
-      title: "科室列表"
-    };
+      title: '科室列表'
+    }
   }
-};
+}
 </script>
 <style lang="less" scoped>
 .gp-dept {

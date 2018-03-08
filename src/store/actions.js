@@ -1,7 +1,7 @@
 import { fetchDeptList } from '@/api'
 
 export default {
-  fetchItem({ commit }, pageIndex = 1) {
+  fetchItem ({ commit }, pageIndex = 1) {
     return fetchDeptList({
       pageIndex: pageIndex
     }).then(res => {

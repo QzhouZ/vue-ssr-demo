@@ -5,7 +5,7 @@ Vue.use(Router)
 
 const List = () => import('../views/list/index.vue')
 
-export function createRouter() {
+export function createRouter () {
   return new Router({
     mode: 'history',
     routes: [{
